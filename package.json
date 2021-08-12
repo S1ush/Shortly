@@ -1,0 +1,11 @@
+{
+  "name": "front-end-test",
+  "version": "1.0.0",
+  "description": "Shorten Long URLs",
+  "main": "server.js",
+  "scripts": {
+    "start" : "npm start --prefix shortly "
+  },
+  "author": "Yash Bhole",
+  "license": "MIT"
+}
