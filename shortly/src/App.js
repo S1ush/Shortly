@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import "./App.css";
+import AdvanceStat from "./components/layout/AdvanceStat";
 import BottomBanner from "./components/layout/BottomBanner";
 import Footer from "./components/layout/Footer";
 import Landing from "./components/layout/Landing";
@@ -12,6 +13,7 @@ const App = () => {
 			<Fragment>
 				<Nav></Nav>
 				<Landing></Landing>
+				<AdvanceStat />
 				<BottomBanner />
 				<Footer />
 			</Fragment>
