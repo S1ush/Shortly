@@ -1,38 +1,281 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  height: 5em;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 8em;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.hamburger {
+  display: none;
+}
+
+navbar-nav {
+  position: relative;
+  top: -2px;
+}
+
+#navbarNav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #bfbfbf !important;
+  padding: 0px 1em;
+}
+
+a:hover {
+  color: #232127 !important;
+}
+
+.nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  height: 5em;
+  width: 8em;
+  border: none;
+  text-decoration: none;
+  background: no-repeat center url("./components/images/logo.svg");
+  display: inline-block;
+}
+
+.login {
+  position: relative;
+  top: 0.5em;
+}
+
+.nav-login {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 10em;
+}
+
+.right {
+  position: relative;
+  left: 35em;
+}
+
+button {
+  height: 2.5em;
+  width: 7em;
+  border-radius: 10em;
   color: white;
+  border: none;
+  background-color: #2acfcf;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #79cdcd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-collapse {
+  -ms-flex-preferred-size: 0% !important;
+      flex-basis: 0% !important;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-toggle {
+  border: 1px white !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .hamburger {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  #navbarNav > ul,
+  navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #3b3054;
+    position: absolute;
+    top: 7em;
+    right: 3em;
+    height: 15em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 19em;
+    border-radius: 1em;
+  }
+  .navbar {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .nav-login {
+    padding-left: 1em;
+  }
+  .right {
+    position: initial;
+    top: 7em;
+    right: 7em;
+    padding: 7px;
+  }
+  .Banner-img {
+    height: 60vh;
+    width: 100%;
+    margin: 0px !important;
+  }
+  .landing {
+    margin: 2em !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .landing h1 {
+    font-size: 3em !important;
+  }
+  .landing P {
+    font-size: 1em !important;
+  }
+  .footer {
+    padding-bottom: 2em !important;
+  }
+  .footer-sm-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px !important;
+  }
+  .bottom-banner {
+    background: no-repeat center url(components/images/bg-boost-mobile.svg) !important;
+    background-size: cover !important;
+    height: 25vh !important;
+    background-color: #3b3054 !important;
+    font-size: 1em !important;
   }
 }
+
+.Banner-img {
+  height: 80vh;
+  width: 100%;
+  background: no-repeat url(components/images/illustration-working.svg);
+  margin-left: 4em;
+}
+
+.landing {
+  margin: 4em 0em 0em 10em;
+}
+
+.landing > h1 {
+  font-size: 4.75em;
+  font-weight: 700;
+}
+
+.landing > p {
+  color: #9e9aa7;
+}
+
+.landing > button {
+  font-size: 1.2em;
+  width: 9em !important;
+}
+
+.footer {
+  background-color: #35323e;
+  color: #bfbfbf;
+  height: auto;
+  padding-top: 3em;
+  padding-bottom: 5em;
+}
+
+.footer-logo {
+  height: 5em;
+  width: 8em;
+  border: none;
+  text-decoration: none;
+  background: no-repeat url(components/images/logo-white.svg);
+}
+
+.footer-head {
+  padding: 1em 0em !important;
+}
+
+.footer-head > a {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.footer-sm-center > li {
+  padding: 0.25em 0em;
+  font-weight: 250 !important;
+}
+
+.footer-sm-center {
+  padding: 0em;
+}
+
+.footer-link:hover {
+  color: #2acfcf !important;
+}
+
+.social-items {
+  font-size: 1.25em;
+}
+
+.bottom-banner {
+  background: no-repeat center url(components/images/bg-boost-desktop.svg);
+  background-size: cover;
+  height: 30vh;
+  width: 100%;
+  background-color: #3b3054;
+}
+
+.bottom-banner > div > h1 {
+  font-weight: 600 !important;
+}
+
+.boost {
+  font-size: 1.2em;
+  width: 9em !important;
+}
+/*# sourceMappingURL=App.css.map */

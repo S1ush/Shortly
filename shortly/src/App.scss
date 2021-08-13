@@ -1,0 +1,230 @@
+$primary-Cyan: hsl(180, 66%, 49%);
+$primary-DarkViolet: hsl(257, 27%, 26%);
+$secondary-Red: hsl(0, 87%, 67%);
+$Neutral-Gray: hsl(0, 0%, 75%);
+$Neutral-Grayish-Violet: hsl(257, 7%, 63%);
+$Neutral-Very-Dark-Blue: hsl(255, 11%, 22%);
+$Neutral-Very-Dark-Violet: hsl(260, 8%, 14%);
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Poppins", sans-serif;
+}
+.nav {
+	height: 5em;
+	width: 100%;
+	// margin: 0em 10em;
+}
+.navbar {
+	display: flex;
+	height: 8em;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+}
+.hamburger {
+	display: none;
+}
+navbar-nav {
+	position: relative;
+	top: -2px;
+}
+#navbarNav > ul {
+	display: flex;
+	list-style: none;
+	align-content: center;
+	justify-content: center;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: $Neutral-Gray !important;
+	padding: 0px 1em;
+}
+a:hover {
+	color: $Neutral-Very-Dark-Violet !important;
+}
+.nav-items {
+	display: flex;
+	justify-content: space-between;
+}
+.logo {
+	height: 5em;
+	width: 8em;
+	border: none;
+	text-decoration: none;
+	background: no-repeat center url("./components/images/logo.svg");
+	display: inline-block;
+}
+.login {
+	position: relative;
+	top: 0.5em;
+}
+.nav-login {
+	justify-content: space-between;
+	padding-left: 10em;
+}
+.right {
+	position: relative;
+	left: 35em;
+}
+button {
+	height: 2.5em;
+	width: 7em;
+	border-radius: 10em;
+	color: white;
+	border: none;
+	background-color: $primary-Cyan;
+}
+button:hover {
+	background-color: hsl(180, 46%, 64%);
+}
+.navbar-collapse {
+	flex-basis: 0% !important;
+	flex-grow: 1;
+	align-items: center;
+}
+.navbar-toggle {
+	border: 1px white !important;
+}
+
+@media only screen and (max-width: 600px) {
+	.hamburger {
+		display: block;
+	}
+	#navbarNav > ul,
+	navbar {
+		display: flex;
+		background-color: $primary-DarkViolet;
+		position: absolute;
+		top: 7em;
+		right: 3em;
+		height: 15em;
+		align-items: center;
+		width: 19em;
+		border-radius: 1em;
+	}
+	.navbar {
+		flex-wrap: nowrap;
+	}
+	.nav-login {
+		padding-left: 1em;
+	}
+	.right {
+		position: initial;
+		top: 7em;
+		right: 7em;
+		padding: 7px;
+	}
+	// banner-img
+	.Banner-img {
+		height: 60vh;
+		width: 100%;
+		margin: 0px !important;
+	}
+	.landing {
+		margin: 2em !important;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h1 {
+			font-size: 3em !important;
+		}
+		P {
+			font-size: 1em !important;
+		}
+	}
+	// footer
+	.footer {
+		padding-bottom: 2em !important;
+	}
+	.footer-sm-center {
+		align-items: center;
+		padding: 0px !important;
+	}
+	// boost-banner
+	.bottom-banner {
+		background: no-repeat center url(components/images/bg-boost-mobile.svg) !important;
+		background-size: cover !important;
+		height: 25vh !important;
+		background-color: $primary-DarkViolet !important;
+		font-size: 1em !important;
+	}
+}
+// end-media query
+// banner-img
+.Banner-img {
+	height: 80vh;
+	width: 100%;
+	background: no-repeat url(components/images/illustration-working.svg);
+	margin-left: 4em;
+}
+.landing {
+	margin: 4em 0em 0em 10em;
+}
+.landing > h1 {
+	font-size: 4.75em;
+	font-weight: 700;
+}
+.landing > p {
+	color: $Neutral-Grayish-Violet;
+}
+.landing > button {
+	font-size: 1.2em;
+	// height: 3em !important;
+	width: 9em !important;
+}
+
+// footer
+.footer {
+	background-color: $Neutral-Very-Dark-Blue;
+	color: $Neutral-Gray;
+	height: auto;
+	padding-top: 3em;
+	padding-bottom: 5em;
+}
+.footer-logo {
+	height: 5em;
+	width: 8em;
+	border: none;
+	text-decoration: none;
+	background: no-repeat url(components/images/logo-white.svg);
+}
+.footer-head {
+	padding: 1em 0em !important;
+}
+.footer-head > a {
+	color: white !important;
+	font-weight: 600 !important;
+}
+.footer-sm-center > li {
+	padding: 0.25em 0em;
+	font-weight: 250 !important;
+}
+.footer-sm-center {
+	padding: 0em;
+}
+.footer-link:hover {
+	color: $primary-Cyan !important;
+}
+.social-items {
+	font-size: 1.25em;
+}
+// bottom-banner
+.bottom-banner {
+	background: no-repeat center url(components/images/bg-boost-desktop.svg);
+	background-size: cover;
+	height: 30vh;
+	width: 100%;
+	background-color: $primary-DarkViolet;
+}
+.bottom-banner > div > h1 {
+	font-weight: 600 !important;
+}
+.boost {
+	font-size: 1.2em;
+	width: 9em !important;
+}
