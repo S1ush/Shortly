@@ -15,6 +15,7 @@ const App = () => {
 				<Nav></Nav>
 				<Landing></Landing>
 				<Shorten />
+
 				<AdvanceStat />
 				<BottomBanner />
 				<Footer />

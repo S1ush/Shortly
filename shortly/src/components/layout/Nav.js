@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 
 const Nav = (props) => {
 	return (
@@ -53,7 +52,5 @@ const Nav = (props) => {
 		</Fragment>
 	);
 };
-
-Nav.propTypes = {};
 
 export default Nav;

@@ -1,5 +1,4 @@
 import React, { Fragment, Link } from "react";
-import PropTypes from "prop-types";
 
 const Navbar = () => {
 	return (
@@ -36,7 +35,5 @@ const Navbar = () => {
 		</Fragment>
 	);
 };
-
-Navbar.propTypes = {};
 
 export default Navbar;

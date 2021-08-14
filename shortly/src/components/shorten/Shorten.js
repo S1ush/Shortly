@@ -1,22 +1,31 @@
-import React, { Fragment, useState } from "react";
-import PropTypes from "prop-types";
+import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
+import ShortLinks from "./ShortLinks";
 
 const Shorten = (props) => {
+	let short = "";
 	const [data, setdata] = useState({
 		link: "",
 	});
+
+	useEffect(() => {
+		localStorage.setItem("shorten-links", JSON.stringify([]));
+	}, []);
+
 	const [local, setlocal] = useState([]);
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		console.log(`https://api.shrtco.de/v2/shorten?url=${link}`);
-		console.log(link);
-		setlocal([{ link: link, short: link }, ...local]);
+		// console.log(`https://api.shrtco.de/v2/shorten?url=${link}`);
+		// console.log(link);
+		const res = await axios.post(
+			`https://api.shrtco.de/v2/shorten?url=${link}`
+		);
+		setlocal([{ link: link, short: res.data.result.short_link }, ...local]);
 		console.log(local);
 		localStorage.setItem(
 			"shorten-links",
-			JSON.stringify([{ link: link, short: link }, local])
+			JSON.stringify([{ link: link, short: res.data.result.short_link }, local])
 		);
 	};
 
@@ -34,6 +43,7 @@ const Shorten = (props) => {
 	return (
 		<Fragment>
 			<div className='containerfluid shorten'>
+				<div className='bg-grey'></div>
 				<div className='shorten-contain mx-auto'>
 					<form
 						class='row flex-grow-1 pt-2 mt-2 d-flex justify-content-center'
@@ -59,10 +69,14 @@ const Shorten = (props) => {
 					</form>
 				</div>
 			</div>
+			<div className>
+				{/* <ShortLinks shortlinks={{ link, short }} /> */}
+				{local.map((links) => (
+					<ShortLinks shortlinks={links} />
+				))}
+			</div>
 		</Fragment>
 	);
 };
-
-Shorten.propTypes = {};
 
 export default Shorten;

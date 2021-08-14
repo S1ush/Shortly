@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 
 const Landing = (props) => {
 	return (
@@ -24,7 +23,5 @@ const Landing = (props) => {
 		</Fragment>
 	);
 };
-
-Landing.propTypes = {};
 
 export default Landing;

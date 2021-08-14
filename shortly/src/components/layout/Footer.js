@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 
 const Footer = (props) => {
 	return (
@@ -134,7 +133,5 @@ const Footer = (props) => {
 		</Fragment>
 	);
 };
-
-Footer.propTypes = {};
 
 export default Footer;

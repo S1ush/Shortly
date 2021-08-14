@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 
 const AdvanceStat = (props) => {
 	return (
 		<Fragment>
-			<div class='bg-light container-fluid'>
+			<div class='bg-light z-index container-fluid'>
 				<div className='d-flex flex-column align-items-center'>
 					<div className='row '>
 						<h1 className='fw-bold text-center'>Advanced Statistics</h1>

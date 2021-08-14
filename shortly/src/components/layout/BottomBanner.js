@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 
 const BottomBanner = (props) => {
 	return (
@@ -13,7 +12,5 @@ const BottomBanner = (props) => {
 		</Fragment>
 	);
 };
-
-BottomBanner.propTypes = {};
 
 export default BottomBanner;
