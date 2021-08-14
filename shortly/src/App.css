@@ -208,6 +208,21 @@ button:hover {
   .circle {
     left: 40% !important;
   }
+  .shorten-contain {
+    background: no-repeat url(components/images/bg-shorten-mobile.svg) !important;
+    background-size: cover !important;
+    background-color: #3b3054 !important;
+    padding: 1.5em !important;
+    padding-bottom: 2em !important;
+  }
+  .input-container {
+    width: 50%;
+    height: 2em !important;
+  }
+  .submit-btn {
+    margin-top: 2.5em !important;
+    width: 100% !important;
+  }
 }
 
 .Banner-img {
@@ -381,5 +396,58 @@ button:hover {
   color: #bfbfbf;
   max-width: 22em;
   padding-bottom: 2.5em;
+}
+
+.shorten-contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: no-repeat url(components/images/bg-shorten-desktop.svg);
+  background-size: cover;
+  background-color: #3b3054;
+  height: 10em;
+  width: 90%;
+  border-radius: 0.5em;
+  padding: 0em 5em;
+}
+
+.submit-btn {
+  border-radius: 0.5em;
+  height: 3em;
+  font-size: 1em;
+  width: 8em;
+}
+
+.input-container {
+  width: auto;
+}
+
+.input {
+  width: 100%;
+  max-width: 100em;
+  height: 3em;
+  font-size: 1em;
+  background-color: blanchedalmond !important;
+  border: none;
+  border-radius: 0.5em;
+  padding: 1.5em;
+}
+
+.input-container[data-error] .input {
+  border-color: #f46262 !important;
+  color: #f46262 !important;
+  background-color: white !important;
+}
+
+.input-container[data-error]::after {
+  content: attr(data-error);
+  color: #f46262;
+  display: block;
 }
 /*# sourceMappingURL=App.css.map */

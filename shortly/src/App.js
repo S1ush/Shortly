@@ -5,6 +5,7 @@ import BottomBanner from "./components/layout/BottomBanner";
 import Footer from "./components/layout/Footer";
 import Landing from "./components/layout/Landing";
 import Nav from "./components/layout/Nav";
+import Shorten from "./components/shorten/Shorten";
 // import Navbar from "./components/layout/Navbar";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
 			<Fragment>
 				<Nav></Nav>
 				<Landing></Landing>
+				<Shorten />
 				<AdvanceStat />
 				<BottomBanner />
 				<Footer />
