@@ -413,7 +413,7 @@ button:hover {
 	padding: 1.5em;
 }
 .input-container[data-error] .input {
-	border-color: $secondary-Red !important;
+	border: 3px solid $secondary-Red !important;
 	color: $secondary-Red !important;
 	background-color: white !important;
 }

@@ -77,8 +77,8 @@ const Shorten = (props) => {
 			</div>
 			<div className>
 				{/* <ShortLinks shortlinks={{ link, short }} /> */}
-				{local.map((links) => (
-					<ShortLinks shortlinks={links} />
+				{local.map((links, index) => (
+					<ShortLinks key={index} shortlinks={links} />
 				))}
 			</div>
 		</Fragment>
