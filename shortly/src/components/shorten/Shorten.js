@@ -3,7 +3,6 @@ import axios from "axios";
 import ShortLinks from "./ShortLinks";
 
 const Shorten = (props) => {
-	let short = "";
 	const [data, setdata] = useState({
 		link: "",
 	});
@@ -16,17 +15,24 @@ const Shorten = (props) => {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		// console.log(`https://api.shrtco.de/v2/shorten?url=${link}`);
-		// console.log(link);
-		const res = await axios.post(
-			`https://api.shrtco.de/v2/shorten?url=${link}`
-		);
-		setlocal([{ link: link, short: res.data.result.short_link }, ...local]);
-		console.log(local);
-		localStorage.setItem(
-			"shorten-links",
-			JSON.stringify([{ link: link, short: res.data.result.short_link }, local])
-		);
+		try {
+			if (link) {
+				const res = await axios.post(
+					`https://api.shrtco.de/v2/shorten?url=${link}`
+				);
+				setlocal([{ link: link, short: res.data.result.short_link }, ...local]);
+				console.log(local);
+				localStorage.setItem(
+					"shorten-links",
+					JSON.stringify([
+						{ link: link, short: res.data.result.short_link },
+						local,
+					])
+				);
+			}
+		} catch (err) {
+			console.log(err);
+		}
 	};
 
 	const { link } = data;

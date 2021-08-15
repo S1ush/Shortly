@@ -3,8 +3,6 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import PropTypes from "prop-types";
 
 const ShortLinks = ({ shortlinks: { link, short } }) => {
-	// link = "test";
-	// short = " shortTest";
 	const [copy, setcopy] = useState("Copy");
 
 	return (
@@ -32,10 +30,10 @@ const ShortLinks = ({ shortlinks: { link, short } }) => {
 							<CopyToClipboard text={short}>
 								<button
 									className={`submit-btn ${
-										copy == "Copied!" ? "bg-purple" : {}
+										copy === "Copied!" ? "bg-purple" : {}
 									} `}
 									onClick={(e) =>
-										copy === "copy" ? setcopy("Copied!") : setcopy("Copy")
+										copy === "Copy" ? setcopy("Copied!") : setcopy("Copy")
 									}
 								>
 									{" "}

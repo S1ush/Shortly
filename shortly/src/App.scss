@@ -153,6 +153,7 @@ button:hover {
 	.footer-sm-center {
 		align-items: center;
 		padding: 0px !important;
+		justify-content: center;
 	}
 	// boost-banner
 	.bottom-banner {
@@ -437,7 +438,7 @@ button:hover {
 	margin-bottom: 0em;
 }
 .short-text > a {
-	font-size: 1.3em;
+	font-size: 1em;
 	color: $primary-Cyan !important;
 	text-align: end;
 	padding-right: 0em;
@@ -448,9 +449,9 @@ button:hover {
 }
 .link-text {
 	padding-top: 0.75em;
-	font-size: 1.3em;
+	font-size: 1em;
 	text-align: center;
-	padding-left: 2em;
+	padding-left: 1.5em;
 }
 .shortlink-submit > .submit-btn {
 	height: 2.5em;
