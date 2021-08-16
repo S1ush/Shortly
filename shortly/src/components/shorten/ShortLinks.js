@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import PropTypes from "prop-types";
 
 const ShortLinks = ({ shortlinks: { link, short } }) => {
 	const [copy, setcopy] = useState("Copy");
@@ -47,7 +46,5 @@ const ShortLinks = ({ shortlinks: { link, short } }) => {
 		</Fragment>
 	);
 };
-
-ShortLinks.propTypes = {};
 
 export default ShortLinks;
